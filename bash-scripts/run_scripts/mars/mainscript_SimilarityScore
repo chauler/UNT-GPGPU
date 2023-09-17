@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__SimilarityScore 1024 256 > output_SSC.txt

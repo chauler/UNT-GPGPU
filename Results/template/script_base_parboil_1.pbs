@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=02:00:00
+#PBS -q hengshan@hengshan.cse.unt.edu
+#PBS -N spmv
+#PBS -V 
+#PBS -m a
+#PBS -M zoplek@gmail.com
+PROG=/home/cy0194/cpugpusim1/bash-scripts/run_scripts/parboil/mainscript_spmv
+ARGS=""
+cd $PBS_O_WORKDIR
+$PROG $ARGS
+exit 0

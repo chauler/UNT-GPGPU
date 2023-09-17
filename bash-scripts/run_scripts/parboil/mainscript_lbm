@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/lbm/build/cuda_default/lbm  -i $PARBOIL_ROOT/benchmarks/lbm/input/short/100_100_130_ldc.of -o $PARBOIL_ROOT/benchmarks/lbm/run/short/reference.dat -- 100 > output_lbm.txt 

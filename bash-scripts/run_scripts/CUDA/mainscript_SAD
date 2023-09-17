@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__SAD -i data/frame.bin,data/reference.bin > output_SAD.txt

@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__DG ./data/cubeK268.neu > output_DG.txt

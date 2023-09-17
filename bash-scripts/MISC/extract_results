@@ -1,0 +1,39 @@
+#!/bin/bash
+
+
+
+touch result_ipc.txt
+rm result_ipc.txt
+touch result_ipc.txt
+
+#for benchmark in AES BFS BlackScholes CP DG JPEG LIB LPS MUM NN NQU RAY STO WP 
+for count in 1 2 3 4 5 6 7 8 9
+do
+for benchmark in BFS
+do
+for flit_size in 8 16 32
+ do
+  for num_vcs in 2 3 4
+   do
+    for vc_buf_size in 2 3 4
+     do
+      for routing_delay in 0 1 2
+       do
+        for vc_alloc_delay in 0 1
+         do
+          for input_speedup in 1 2
+           do
+                 dirname="$echo "$benchmark+$flit_size+$num_vcs+$vc_buf_size+$routing_delay+$vc_alloc_delay+$input_speedup""
+                 grep -m $count -F "Traffic[0]class0Overall average latency"  $dirname/output.txt > temp
+                 sed -n '$p' temp > temp_last
+                 cat temp_last | sed -e "s/Traffic[0]class0Overall average latency/$dirname Traffic[0]class0Overall average latency/g" >> results/result_latency1_bfs_$count.txt 
+                 rm temp
+                 rm temp_last
+           done
+         done
+        done
+       done
+     done
+    done
+ done
+done

@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__radixsort --n=4194304 --iterations=1 --keysonly > output_radixsort.txt

@@ -1,0 +1,53 @@
+#!/bin/bash
+
+
+
+touch file
+rm file
+touch file
+
+#for benchmark in AES BFS BlackScholes CP DG JPEG LIB LPS MUM NN NQU RAY STO WP 
+for benchmark in LPS
+do
+for flit_size in 8 16 32
+ do
+  for num_vcs in 2 3 4
+   do
+    for vc_buf_size in 2 3 4
+     do
+      for routing_delay in 0 1 2
+       do
+        for vc_alloc_delay in 0 1
+         do
+          for input_speedup in 1 2
+           do
+
+            fs="flit_size =  $(echo "$flit_size" | bc);"
+            nvcs="num_vcs     = $(echo "$num_vcs" | bc);"
+            bs="vc_buf_size = $(echo "$vc_buf_size" | bc);"
+            rd="routing_delay  = $(echo "$routing_delay" | bc);"
+            ad="vc_alloc_delay = $(echo "$vc_alloc_delay" | bc);"
+            is="input_speedup     = $(echo "$input_speedup" | bc);"
+
+            echo " " >> file
+            echo $fs >> file
+            echo $nvcs >> file
+            echo $bs >> file
+            echo $rd >> file
+            echo $ad >> file
+            echo $is >> file
+
+            dirname="$echo "$benchmark+$flit_size+$num_vcs+$vc_buf_size+$routing_delay+$vc_alloc_delay+$input_speedup""
+            mkdir $dirname
+            cp /i3c/hpcl/axj936/shared/mesh $dirname
+            cat file >> $dirname/mesh
+            cp /i3c/hpcl/axj936/gpgpu-sim_v2.1.1b/configs/ISPASS-2009/gpgpusim.config $dirname
+            rm file
+           done
+         done
+        done
+       done
+     done
+    done
+ done
+

@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/fft/build/cuda_default/fft -i $PARBOIL_ROOT/benchmarks/fft/input/default/array.bin -o $PARBOIL_ROOT/benchmarks/fft/run/default/result.dat 256 1024 > output_fft.txt 

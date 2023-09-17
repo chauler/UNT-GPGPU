@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/spmv/build/cuda_default/spmv -i $PARBOIL_ROOT/benchmarks/spmv/input/large/Dubcova2.mtx.bin -o $PARBOIL_ROOT/benchmarks/spmv/run/large/Dubcova2.mtx.out > output_spmv.txt 

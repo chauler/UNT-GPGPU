@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=100:00:00
+#PBS -q inti@pbs.cse.psu.edu
+#PBS -N LPS
+#PBS -V 
+#PBS -m a
+#PBS -M adwaitjog@gmail.com
+PROG=/i3c/hpcl/axj936/gpgpu-sim_v2.1.1b/benchmarks/CUDA/1_NOC_DES_SPACE/AES+8+2+2+0+0+1/mainscript
+ARGS=""
+cd $PBS_O_WORKDIR
+$PROG $ARGS
+exit 0

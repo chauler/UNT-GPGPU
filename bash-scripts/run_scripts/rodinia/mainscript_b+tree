@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__b+tree file ../data/b+tree/mil.txt command ../data/b+tree/command.txt > output_b+tree.txt

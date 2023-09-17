@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__particlefilter_naive -x 128 -y 128 -z 10 -np 10000 > output_pf_naive.txt

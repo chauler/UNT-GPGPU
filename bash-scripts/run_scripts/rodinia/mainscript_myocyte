@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__myocyte 10000 1000 1 > output_myocyte.txt

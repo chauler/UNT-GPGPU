@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__bfs ../data/bfs/graph1MW_6.txt > output_bfs.txt

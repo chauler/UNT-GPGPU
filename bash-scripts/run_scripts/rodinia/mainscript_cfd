@@ -1,0 +1,2 @@
+./gpgpu_ptx_sim__cfd ../data/cfd/fvcorr.domn.193K   > output_cfd.txt
+

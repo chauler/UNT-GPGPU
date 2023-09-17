@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+#for benchmark in AES BFS BlackScholes CP DG JPEG LIB LPS MUM NN NQU RAY STO WP 
+          for jobid in {528420..528643} 
+           do
+           qdel $jobid
+           echo "$jobid"
+      done
+

@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__nw 2048 10 > output_nw.txt

@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__lud -i ../data/lud/256.dat > output_lud.txt

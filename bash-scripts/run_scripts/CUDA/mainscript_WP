@@ -1,0 +1,1 @@
+echo "10 ./data/" | ./gpgpu_ptx_sim__WP > output_WP.txt

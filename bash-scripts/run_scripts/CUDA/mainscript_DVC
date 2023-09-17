@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__DVC data/test_stream.drc > output_DVC.txt

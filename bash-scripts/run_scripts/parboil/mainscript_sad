@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/sad/build/cuda_default/sad -i $PARBOIL_ROOT/benchmarks/sad/input/default/reference.bin,$PARBOIL_ROOT/benchmarks/sad/input/default/frame.bin -o $PARBOIL_ROOT/benchmarks/sad/run/default/out.bin > output_sad.txt 

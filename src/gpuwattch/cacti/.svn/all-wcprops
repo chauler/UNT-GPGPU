@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti
+END
+uca.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/uca.h
+END
+bank.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/bank.cc
+END
+cache.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/cache.cfg
+END
+mat.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/mat.h
+END
+nuca.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/nuca.cc
+END
+cacti.i
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/cacti.i
+END
+arbiter.cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/arbiter.cc
+END
+nuca.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/nuca.h
+END
+Ucache.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/Ucache.cc
+END
+const.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/const.h
+END
+htree2.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/htree2.cc
+END
+Ucache.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/Ucache.h
+END
+arbiter.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/arbiter.h
+END
+component.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/component.cc
+END
+cacti_interface.cc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/cacti_interface.cc
+END
+basic_circuit.cc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/basic_circuit.cc
+END
+contention.dat
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/contention.dat
+END
+component.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/component.h
+END
+wire.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/wire.cc
+END
+highradix.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/highradix.cc
+END
+decoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/decoder.h
+END
+io.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/io.cc
+END
+wire.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/wire.h
+END
+area.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/area.cc
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/README
+END
+area.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/area.h
+END
+technology.cc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/technology.cc
+END
+out_batch_test_result.csv
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/out_batch_test_result.csv
+END
+bank.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/bank.h
+END
+crossbar.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/crossbar.cc
+END
+batch_tests
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/batch_tests
+END
+router.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/router.cc
+END
+parameter.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/parameter.cc
+END
+crossbar.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/crossbar.h
+END
+mat.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/mat.cc
+END
+parameter.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/parameter.h
+END
+router.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/router.h
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/main.cc
+END
+subarray.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/subarray.cc
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/makefile
+END
+subarray.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/subarray.h
+END
+htree2.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/htree2.h
+END
+basic_circuit.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/basic_circuit.h
+END
+cacti_interface.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/cacti_interface.h
+END
+cacti.mk
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/cacti.mk
+END
+decoder.cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/decoder.cc
+END
+uca.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/uca.cc
+END
+highradix.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/highradix.h
+END
+io.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/cpugpusim/src/gpuwattch/cacti/io.h
+END

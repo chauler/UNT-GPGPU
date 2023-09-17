@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/histo/build/cuda_default/histo -i $PARBOIL_ROOT/benchmarks/histo/input/default/img.bin -o $PARBOIL_ROOT/benchmarks/histo/run/default/ref.bmp -- 100 4 > output_histo.txt 

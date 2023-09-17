@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+
+touch result_ipc.txt
+rm result_ipc.txt
+touch result_ipc.txt
+
+#for benchmark in AES BFS BlackScholes CP DG JPEG LIB LPS MUM NN NQU RAY STO WP 
+for benchmark in LPS BlackScholes AES JPEG RAY BFS
+do
+for flit_size in 8 16 32
+ do
+  for num_vcs in 2 3 4
+   do
+    for vc_buf_size in 2 3 4
+     do
+      for routing_delay in 0 1 2
+       do
+        for vc_alloc_delay in 0 1
+         do
+          for input_speedup in 1 2
+           do
+                 dirname="$echo "$benchmark+$flit_size+$num_vcs+$vc_buf_size+$routing_delay+$vc_alloc_delay+$input_speedup""
+                 grep "average accepted rate"  $dirname/output.txt > temp
+                 cat temp | sed -e "s/average accepted rate/$dirname average accepted rate/g" >> results/result_throughput_$benchmark.txt 
+           done
+         done
+        done
+       done
+     done
+    done
+done
+rm temp

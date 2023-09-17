@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__NN 28 > output_NN.txt

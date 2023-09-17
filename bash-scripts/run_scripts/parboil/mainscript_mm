@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/mm/build/cuda_default/mm -i $PARBOIL_ROOT/benchmarks/mm/input/large/matrix1.txt,$PARBOIL_ROOT/benchmarks/mm/input/large/matrix2.txt,$PARBOIL_ROOT/benchmarks/mm/input/large/matrix2t.txt -o $PARBOIL_ROOT/benchmarks/mm/run/large/matrix3.txt > output_mm.txt 

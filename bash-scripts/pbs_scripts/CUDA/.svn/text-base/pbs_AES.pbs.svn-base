@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=100:00:00
+#PBS -q inti@pbs.cse.psu.edu
+#PBS -N AES
+#PBS -V 
+#PBS -m a
+#PBS -M adwaitjog@gmail.com
+PROG= ../CUDA/AES/mainscript_AES
+ARGS=""
+cd $PBS_O_WORKDIR
+$PROG $ARGS
+exit 0

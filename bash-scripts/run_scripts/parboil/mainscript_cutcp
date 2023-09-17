@@ -1,0 +1,1 @@
+$PARBOIL_ROOT/benchmarks/cutcp/build/cuda_default/cutcp -i $PARBOIL_ROOT/benchmarks/cutcp/input/small/watbox.sl40.pqr -o $PARBOIL_ROOT/benchmarks/cutcp/run/small/lattice.dat > output_cutcp.txt 

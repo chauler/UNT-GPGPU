@@ -1,0 +1,61 @@
+use_map = 1;
+flit_size = 64; //total flit size. if double network, it is 32. if quad network, it can be 16-16, or might depend on the ratios
+
+// Network count
+network_count = 2;
+
+// Network resource ratio
+seperate_network_ratio = 3; //1: GPU=3, CPU=1. 2: GPU=2, CPU=2. 3: GPU=1, CPU=3.
+
+// Topology
+topology = mesh;
+k = 6;
+n = 2;
+//topology = fly;
+//k = 36;
+//n = 1;
+
+// Routing
+routing_function = dim_order;//dest_tag;//dim_order;//min_adapt;//dim_order;//_ni;
+
+// Flow control
+num_vcs     = 4; //4; 
+vc_buf_size = 4; //16; //buf size for double is 8. for quad, it can be 4-4, or might depend on the ratios
+wait_for_tail_credit = 1;
+
+ejection_buf_size = 16;
+
+// Router architecture
+
+vc_allocator = islip;//i1_pim; //islip; //pim
+sw_allocator = islip;//i1_pim;//islip; //pim
+alloc_iters  = 1;
+
+credit_delay   = 2;
+routing_delay  = 2;
+vc_alloc_delay = 2;
+
+input_speedup     = 2;
+output_speedup    = 1;
+internal_speedup  = 1.0;
+
+// Traffic (DO NOT CHANGE THIS)
+traffic = gpgpusim; 
+
+//not used in gpgpusim
+// const_flits_per_packet = 3;
+injection_process = gpgpu_injector;
+// Simulation 
+//not used in gpgpusim
+sim_type       = latency;
+injection_rate = 0.1;
+
+
+// Statistics for Interconnection (Added for GPGPU-Sim)
+MATLAB_OUTPUT = 1; // output data in MATLAB friendly format
+DISPLAY_LAT_DIST = 1; // distribution of packet latencies
+DISPLAY_HOP_DIST = 1; // distribution of hop counts
+DISPLAY_PAIR_LATENCY = 0;
+
+// Detailed interconnect stats
+enable_link_stats = 0;

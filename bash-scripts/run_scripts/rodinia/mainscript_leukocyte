@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__leukocyte  ../data/leukocyte/testfile.avi 5 > output_leukocyte.txt

@@ -1,0 +1,76 @@
+# common parameters
+numclevels:2
+llc_shared:1
+numcpus:8
+llc_banks:8
+mem_controllers:4
+prefetch_enable:0
+prefetch_degree:0
+prefetch_distance:0
+core_raw_cpi:1
+threads_per_core:1
+# timing parameters
+core_transfer_time:1
+llc_transfer_time:1 
+mem_transfer_time:260
+hop_time:1
+mlc_lookup_time:2
+llc_lookup_time:6
+mem_access_time:16 
+mlc_victim_lookup_time:2
+llc_victim_lookup_time:6
+APP_PRIOR:0
+PF_MEM_SHORTCIRCUIT:0
+# cache queue parameters
+mlc_blocked_queue_size:16
+llc_blocked_queue_size:16
+mlc_request_queue_size:16
+llc_request_queue_size:16
+mem_request_queue_size:16
+# cache size parameters
+#16KB bank
+#clevel:mlc:csize:16384
+#32KB bank
+clevel:mlc:csize:32768
+#64KB bank
+#clevel:mlc:csize:65536
+#256KB bank
+#clevel:mlc:csize:262144
+clevel:mlc:assoc:4
+clevel:mlc:lsize:64
+clevel:mlc:sectors:1
+#16KB bank
+#clevel:llc:csize:16384
+#512KB bank
+#clevel:llc:csize:524288
+#1MB bank
+clevel:llc:csize:1048576
+#2MB bank
+#clevel:llc:csize:2097152
+#4MB bank
+#clevel:llc:csize:4194304
+clevel:llc:assoc:8
+clevel:llc:lsize:64
+clevel:llc:sectors:1
+# debug options
+DEBUG:0
+PRINT:1
+INTERACTIVE:1
+STAT:0
+RECORD:0
+EP_RECORD_NOC:1
+CACHE_QOS:0
+# network parameters
+#stat parameters
+#1M
+stat_interval:1000000
+#0.1M
+#stat_interval:100000
+#0.01M
+#stat_interval:10000
+#0.0001M
+#stat_interval:100
+#workload
+#benchmark:sjbb
+network_lat:10
+#page_bank_map:1

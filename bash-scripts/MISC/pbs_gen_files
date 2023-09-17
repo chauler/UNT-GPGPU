@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+#for benchmark in AES BFS BlackScholes CP DG JPEG LIB LPS MUM NN NQU RAY STO WP 
+for benchmark in LPS
+do
+for flit_size in 8 16 32
+ do
+  for num_vcs in 2 3 4
+   do
+    for vc_buf_size in 2 3 4
+     do
+      for routing_delay in 0 1 2
+       do
+        for vc_alloc_delay in 0 1
+         do
+          for input_speedup in 1 2
+           do
+            scriptname="$echo "script+$benchmark+$flit_size+$num_vcs+$vc_buf_size+$routing_delay+$vc_alloc_delay+$input_speedup""
+            benchname="$echo"$benchmark+$flit_size+$num_vcs+$vc_buf_size+$routing_delay+$vc_alloc_delay+$input_speedup""
+            cat script_base.pbs | sed -e "s/AES+8+2+2+0+0+1/$benchname/g" > $scriptname.pbs
+            mv $scriptname.pbs $benchname
+           done
+         done
+        done
+       done
+     done
+    done
+ done
+

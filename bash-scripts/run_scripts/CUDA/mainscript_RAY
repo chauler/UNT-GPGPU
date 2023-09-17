@@ -1,0 +1,1 @@
+./gpgpu_ptx_sim__RAY  256 256 > output_RAY.txt

@@ -1,0 +1,10 @@
+pepsi :
+
+./bin/casper.exe ocean 64 cmp-conf.file nox-conf.file
+
+nox standalone :
+cd nox
+1.
+./bin/nox -num-PE 64 -t MESH -nr 8 -nc 8 -fsize 512 -l 0.15 -source-queue -trace -rob-size 128 -arb PR -rank-type globalRR -batch-type globalTB -batch-int 200
+2.
+./bin/nox -num-PE 64 -t MESH -nr 8 -nc 8 -fsize 512 -l 0.15 -source-queue -trace -rob-size 128 -arb PR -rank-type localSJF -batch-type globalRB -batch-cap 64
