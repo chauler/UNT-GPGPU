@@ -18,10 +18,19 @@ config.l:19:5: error: redefinition of 'int configlineno'
 edit config.l and rename configlineno. Replace all instances with new name.
 
 2.
+ar: /UNT-GPGPU/src/gpuwattch/obj_opt/*.o: No such file or directory
 
 Edit ./Makefile line 227, -z to -n in second conditional. This allows makefile to create the correct directory.
 if [ ! -d $(GPGPUSIM_POWER_MODEL)/obj_opt ] && [ ! -z $(GPGPUSIM_POWER_MODEL) ]; then mkdir -p $(GPGPUSIM_POWER_MODEL)/obj_opt; fi;
 
-Edit src/Makefile and add the following vars before the first rule:
+Add rule to ./Makefile and make it a dependency of gpgpusimlib.
+gpuwatch: cuda-sim gpgpu-sim_uarch intersim
+    $(MAKE) -C ./src/gpuwattch
+
+gpgpusimlib: cuda-sim gpgpu-sim_uarch intersim gpuwatch
+    $(MAKE) -C ./src/ depend
+    $(MAKE) -C ./src/
+
+//Edit src/Makefile and add the following vars before the first rule:
 //GPUWATCH1 = $(shell ls gpuwattch/*.cc)
 //GPUWATCH2 = $(notdir $(GPUWATCH1))
