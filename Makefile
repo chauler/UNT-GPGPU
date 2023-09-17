@@ -202,7 +202,7 @@ cpu-sim: cuda-sim gpgpu-sim_uarch intersim
 	$(MAKE) -C ./src/cpu-sim 
 
 gpuwatch: cuda-sim gpgpu-sim_uarch intersim
-    $(MAKE) -C ./src/gpuwattch
+	$(MAKE) -C ./src/gpuwattch
 
 gpgpusimlib: cuda-sim gpgpu-sim_uarch intersim gpuwatch
 	$(MAKE) -C ./src/ depend
