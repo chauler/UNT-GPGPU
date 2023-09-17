@@ -31,6 +31,5 @@ gpgpusimlib: cuda-sim gpgpu-sim_uarch intersim gpuwatch
     $(MAKE) -C ./src/ depend
     $(MAKE) -C ./src/
 
-//Edit src/Makefile and add the following vars before the first rule:
-//GPUWATCH1 = $(shell ls gpuwattch/*.cc)
-//GPUWATCH2 = $(notdir $(GPUWATCH1))
+3.
+cuda_runtime_api.cc compilation errors: add the .str() method to the stringstream objects in the print statement.
