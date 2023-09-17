@@ -1,0 +1,18 @@
+We are building off an existing Docker image that contains most of the tooling we need (eteral00/kldh-unt-gpgpusim:cuda9010v3) but with some wrong versions.
+Downgrade CUDA from 9.1 to 4.0 with
+wget "http://developer.download.nvidia.com/compute/cuda/4_0/toolkit/cudatoolkit_4.0.17_linux_64_ubuntu10.10.run"
+uninstall existing version and install this to default path.
+
+Make sure CUDA_INSTALL_PATH and LD_LIBRARY_PATH variables, located in ~/.bashrc, point to the correct paths. The last 3 lines should look something like this:
+
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_INSTALL_PATH=/usr/local/cuda
+
+
+Error fixing:
+1.
+config.l:19:5: error: redefinition of 'int configlineno'
+ int configlineno = 1;
+
+edit config.l and rename configlineno. Replace all instances with new name.
