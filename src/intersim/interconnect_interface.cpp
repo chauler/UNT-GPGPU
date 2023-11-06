@@ -8,6 +8,9 @@
 #include <string.h>
 #include <assert.h>
 #include <queue>
+#include <map>
+#include <utility>
+#include <algorithm>
 
 #include "routefunc.hpp"
 #include "traffic.hpp"
@@ -42,6 +45,9 @@ unsigned int ejection_buffer_capacity;
 unsigned int boundary_buf_capacity;
 
 unsigned int input_buffer_capacity;
+
+static vector<int> mcs(8, -1);
+static map<int, std::vector<int> > mc_map;
 
 class boundary_buf {
 private:
@@ -258,18 +264,24 @@ void create_node_map(int n_shader, int n_mem, int n_cpu, int size, int use_map)
 
         case 36:
         { // for CPU+GPU mesh topology 8 MC, 14 CPU, 14*2 GPU
+            //Read one line for each type of core
             for (std::vector<int>::iterator it = core_counts.begin(); it != core_counts.end();) {
             std:string line;
                 if (!getline(layout_conf_file, line)) {
                     std::cout << "Incorrect layout configuration: not enough lines." << std::endl;
                     exit(1);
                 }
+                if (line.length() == 0) { continue; }
                 if (line.at(0) == '#') { std::cout << "Skipping comment: " << line << std::endl; continue; } //Line is a comment
+                //Line should be a list of numbers separated by spaces
                 std::istringstream iss(line);
                 std::cout << "Parsing layout line: " << line << std::endl;
                 for (int i = 0; i < *it; i++) {
-                    iss >> node_map[map_pos++];
-                    std::cout << "CORE NUM: " << node_map[map_pos - 1] << std::endl;
+                    if (!(iss >> node_map[map_pos++]))
+                    {
+                        std::cout << "Incorrect number of nodes in layout config." << std::endl;
+                        exit(1);
+                    }
                 }
                 it++;
             }
@@ -340,6 +352,39 @@ void create_node_map(int n_shader, int n_mem, int n_cpu, int size, int use_map)
             }
         }
     }
+
+    std::string line;
+    while (getline(layout_conf_file, line)) {
+        if (line.find("MC mapping") != std::string::npos) {
+            break;
+        }
+    }
+
+    for (int i = 0; getline(layout_conf_file, line);) {
+        if (line.length() == 0 || line.at(0) == '#') { //Skip lines before finding "MC mapping", all empty lines, and comments
+            continue;
+        }
+        std::istringstream iss(line);
+        //iss >> mcs[i++];
+        int mc = -1;
+        std::vector<int> id_list;
+        iss >> mc;
+        iss.ignore(255, ':');
+        for (int id = -1; iss >> id;) {
+            id_list.push_back(id);
+        }
+
+        mc_map.insert(std::pair<int, vector<int> >(mc, id_list));
+
+    }
+
+    for (std::map<int, vector<int> >::iterator it = mc_map.begin(); it != mc_map.end(); it++) {
+        //std::cout<<mcs[i]<<std::endl;
+        std::cout << it->first << "=>";
+        for (std::vector<int>::iterator it2 = it->second.begin(); it2 != it->second.end(); it2++) { std::cout << *it2 << " "; }
+        std::cout << std::endl;
+    }
+
     printf("GPGPU-Sim uArch: interconnect nodemap\n");
     display_map((int)sqrt(size), size);
     display_reverse_map((int)sqrt(size), size);
@@ -476,32 +521,42 @@ void interconnect_push(unsigned int input_node, unsigned int output_node,
 
     int input = node_map[input_node];
     int output;
-    if (is_shd(input)) {
+    /*if (is_shd(input)) {
         if ((input % 6) < 3 && (input / 6) < 3) {
-            output = 6;
+            output = mcs[0];
         }
         else if ((input % 6) > 2 && (input / 6) < 3) {
-            output = 11;
+            output = mcs[1];
         }
         else if ((input % 6) < 3 && (input / 6) > 2) {
-            output = 24;
+            output = mcs[2];
         }
         else if ((input % 6) > 2 && (input / 6) > 2) {
-            output = 29;
+            output = mcs[3];
         }
     }
     else if (is_cpu(input)) {
         if ((input % 6) < 3 && (input / 6) < 3) {
-            output = 0;
+            output = mcs[4];
         }
         else if ((input % 6) > 2 && (input / 6) < 3) {
-            output = 5;
+            output = mcs[5];
         }
         else if ((input % 6) < 3 && (input / 6) > 2) {
-            output = 30;
+            output = mcs[6];
         }
         else if ((input % 6) > 2 && (input / 6) > 2) {
-            output = 35;
+            output = mcs[7];
+        }
+    }*/
+    //Maps core position to MC according to the config
+    if (is_shd(input) || is_cpu(input)) {
+        for (std::map<int, std::vector<int> >::iterator it = mc_map.begin(); it != mc_map.end(); it++) {
+            std::vector<int>::iterator element = std::find(it->second.begin(), it->second.end(), input);
+            if (element != it->second.end()) {
+                output = it->first;
+                break;
+            }
         }
     }
     else {
