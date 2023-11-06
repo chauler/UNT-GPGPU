@@ -123,7 +123,9 @@ void cpu_init(unsigned int num_cpus)
 
   //Check
   printf("CPU bm config : %s\n", benchmark);
+  printf("CPU trace config : %s\n", trace_conf_file);
   printf("CPU core config : %s\n", cmp_conf_file);
+  printf("CPU Fast Forward config : %s\n", fast_forward_conf_file);
   fflush(stdout);
 
   //CMP Configuration is read and set up
